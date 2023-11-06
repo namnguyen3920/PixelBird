@@ -3,57 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-//public class ScoreManager : MonoBehaviour
-//{
-//    private static ScoreManager instance;
-//    public static ScoreManager Instance {  get { return instance; } }
 
-//    [SerializeField] private TextMeshProUGUI _currentScoreText;
-//    [SerializeField] private TextMeshProUGUI _highestScoreText;
-
-//    public int score = 0;
-//    public int highest;
-
-//    private void Awake()
-//    {
-//        if (instance == null) {
-//           instance = this; 
-//        }
-//    }
-    
-//    public void AddScore(int amount)
-//    {
-//        score += amount;
-//        if (score > highest)
-//        {
-//            highest = score;
-//        }
-//        UpdateScore();
-//    }
-
-//    public void Reset()
-//    {
-//        score = 0;
-//    }
-
-//    public void OnRoundOver()
-//    {
-//        PlayerPrefs.SetInt("Highest", highest);
-//        _highestScoreText.text = highest.ToString();
-//        Reset();
-//    }
-
-//    public void UpdateHighScore()
-//    {
-//        PlayerPrefs.SetInt("Highest", score);
-//        _highestScoreText.text = highest.ToString();
-//    }
-//    public void UpdateScore()
-//    {
-//        _currentScoreText.text = score.ToString();
-//        UpdateHighScore()
-//    }
-//}
 
 public class ScoreManager : MonoBehaviour
 {

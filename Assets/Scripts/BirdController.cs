@@ -13,11 +13,15 @@ public class BirdController : MonoBehaviour
     [SerializeField] private float _rotation = 10f;
     [SerializeField] private GameObject _gameStartCanvas;
     Rigidbody2D rb;
+
+    public AudioClip flapSound;
+
     private bool _isStart = false;
     private bool canMove = true;
 
     private void Awake()
     {
+        
         if (instance == null) { instance = this; }
     }
     void Start()
@@ -41,13 +45,16 @@ public class BirdController : MonoBehaviour
         {
             rb.velocity = Vector2.up * _flySpeed;
             _isStart = true;
+            SoundManager.Instance.PlaySound(flapSound);
         }
 
         if (_isStart)
         {
+            
             GameManager.Instance.PlayingGame();
         }
         else { GameManager.Instance.StartGame(); }
+
     }
 
     private void BirdRotate()
